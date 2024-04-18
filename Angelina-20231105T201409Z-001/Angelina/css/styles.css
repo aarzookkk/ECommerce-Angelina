@@ -1,0 +1,557 @@
+/* hace que todos los elementos que se encuentren dentro de las etiquetas 
+   <html></html> hereden la propiedad box-sizing: border-box; 
+   asignada en el elemento padre (<html></html>) */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Variables */
+:root {
+  --main-color: #786a12;
+}
+
+/* Estilos Globales */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  display: block;
+  background-color: #f7db25;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color 0.3s ease-out;
+  border-radius: 1rem;
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: auto;
+  }
+}
+
+.btn:hover {
+  background-color: #e0c516;
+  cursor: pointer;
+}
+
+/*Utilidades*/
+.center-text {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .max-with-30 {
+    max-width: 30rem;
+  }
+}
+
+/* header y nav principal */
+.site-name {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.site-name span {
+  color: var(--main-color);
+}
+
+.main-nav-container {
+  border-top: 0.1rem solid #dedede;
+}
+
+.main-nav {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.hero {
+  background-image: url(../img/principal.jpg);
+  height: 25rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 55rem;
+  }
+}
+
+/*Lista de categorias*/
+.categories {
+  padding-top: 5rem;
+}
+
+.categories-list img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.categories-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .categories-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.category a {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.category a:hover {
+  color: #ffffff;
+  background-color: var(--main-color);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/*Sobre Nosotros*/
+.about-us {
+  padding-top: 5rem;
+}
+
+@media (min-width: 1035px) {
+  .about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-us div {
+  background-color: var(--main-color);
+  padding: 2rem;
+  color: #fff;
+}
+
+.about-us img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 1400px) {
+  .about-us div {
+    max-height: 40rem;
+    padding: 4rem;
+  }
+  .about-us img {
+    max-height: 40rem;
+  }
+}
+
+/*Productos*/
+.main-content {
+  padding-top: 5rem;
+}
+
+.product {
+  border-radius: 1rem;
+  border: 1px solid #e1e1e1;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  margin: 2rem;
+}
+
+.product-text {
+  color: #000;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.product-text h3 {
+  margin: 0rem;
+}
+
+.product-text .price {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+.product-text p {
+  margin: 0 0 0.5rem 0;
+}
+
+.h2-main-index {
+  display: inline;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.main-content .view-all {
+  margin-left: 1rem;
+  color: #db4f30;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .product {
+    margin: 0;
+  }
+
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .product:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .product:nth-child(1) img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .product:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .product:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+  }
+
+  .product:nth-child(2) img,
+  .product:nth-child(3) img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+  }
+
+  .product:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .product:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .product:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+
+  .product:nth-child(4) img,
+  .product:nth-child(5) img,
+  .product:nth-child(6) img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+
+  .h2-main-index {
+    display: inline;
+    font-size: 3rem;
+  }
+
+  .main-content .view-all {
+    margin-left: 2rem;
+    font-weight: 600;
+  }
+}
+
+/*footer*/
+.site-footer {
+  margin-top: 5rem;
+  padding-top: 5rem;
+  border-top: 1px solid #e1e1e1;
+}
+
+@media (min-width: 768px) {
+  .grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid-footer div {
+    margin: 0 5rem;
+  }
+}
+
+.grid-footer div {
+  margin-bottom: 2rem;
+}
+
+.footer-menu a {
+  display: block;
+  text-align: center;
+}
+
+.site-footer h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-menu a {
+    text-align: left;
+  }
+
+  .site-footer h3 {
+    text-align: left;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.copyright span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/*Pagina Nosotros*/
+.content-about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.image-us img {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.information-about-us {
+  padding: 5rem;
+}
+
+@media (min-width: 768px) {
+  .information-about-us {
+    padding: 2rem;
+  }
+  .image-us img {
+    padding: 2rem 0 2rem 2rem;
+  }
+}
+
+/*Blog*/
+
+@media (min-width: 768px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.blog-entry {
+  border-bottom: 0.2rem solid #e1e1e1;
+  padding-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.content,
+.information {
+  padding: 2rem;
+}
+
+.blog-entry h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .blog-entry h2 {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+.blog-entry:last-of-type {
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content,
+  .information {
+    padding: 1rem;
+  }
+}
+
+.information span {
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+/*Post*/
+
+@media (min-width: 768px) {
+  .post-content {
+    width: 60rem;
+    margin: 0 auto 0 auto;
+  }
+}
+
+/*Galeria*/
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.gallery img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
+/*Formulario*/
+
+.form {
+  max-width: 60rem;
+  margin: 0 auto 0 auto;
+}
+
+form fieldset {
+  border-color: gray;
+  border-width: 0.1rem;
+  border-style: solid;
+  margin-bottom: 2.5rem;
+}
+
+form legend {
+  color: #fff;
+  background-color: var(--main-color);
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  padding: 1rem;
+}
+
+.field {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.field label {
+  flex-basis: 10rem;
+}
+
+.field input:not([type="radio"]),
+.field textarea,
+.field select {
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+}
